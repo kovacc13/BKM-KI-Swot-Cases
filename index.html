@@ -13,12 +13,13 @@
             font-family: 'Inter', sans-serif;
         }
         .accordion-content {
-            transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+            transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out, margin-top 0.5s ease-in-out;
             max-height: 0;
             overflow: hidden;
         }
         .accordion-card.active .accordion-content {
-            max-height: 1000px; 
+            max-height: 1000px; /* Adjust if content is larger */
+            margin-top: 0;
         }
         .rotate-180 {
             transform: rotate(180deg);
@@ -31,18 +32,18 @@
 <body class="bg-gray-50 text-gray-800">
 
     <!-- Header Section -->
-    <div class="bg-white shadow-md">
+    <header class="bg-white shadow-md">
         <div class="container mx-auto px-6 py-8">
             <h1 class="text-3xl md:text-4xl font-bold text-gray-900">KI-Potenziale für die BKM Akademie</h1>
             <p class="mt-2 text-lg text-gray-600">Eine interaktive Übersicht der strategischen Anwendungsfälle zur Transformation des Bildungsangebots.</p>
         </div>
-    </div>
+    </header>
 
     <!-- Main Content -->
     <main class="container mx-auto px-6 py-12">
 
         <!-- SWOT Analysis Section -->
-        <div class="mb-12">
+        <section class="mb-12">
             <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-2">Strategische Analyse: KI in der Bildung</h2>
             <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Eine SWOT-Analyse beleuchtet die internen Stärken und Schwächen sowie die externen Chancen und Risiken für Akademien wie die BKM beim Einsatz von Künstlicher Intelligenz.</p>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -108,10 +109,10 @@
                 </div>
             </div>
              <hr class="my-12 border-gray-200">
-        </div>
+        </section>
         
         <!-- Use Cases Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
             <!-- Card 1: Content-Erstellung -->
             <div id="card1" class="accordion-card bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
@@ -129,7 +130,7 @@
                         <p><strong>Die Chance:</strong> Die Erstellung hochwertiger Kursunterlagen drastisch beschleunigen und durch erstklassige KI-Übersetzung neue internationale Märkte erschließen.</p>
                         <div class="bg-gray-100 p-4 rounded-lg">
                             <h4 class="font-semibold text-gray-800">Praxisbeispiel für BKM:</h4>
-                            <p class="mt-1">Ein Dozent gibt eine Anweisung zur Erstellung eines Skripts für "Grundlagen der Hautanatomie". Die KI generiert einen Entwurf. Der Experte verfeinert diesen und übersetzt ihn anschließend via **DeepL** präzise in Zielsprachen. **Die Produktionszeit wird von Wochen auf Tage reduziert.**</p>
+                            <p class="mt-1">Ein Dozent gibt eine Anweisung zur Erstellung eines Skripts für "Grundlagen der Hautanatomie". Die KI generiert einen Entwurf. Der Experte verfeinert diesen und übersetzt ihn anschließend via <strong>DeepL</strong> präzise in Zielsprachen. <strong>Die Produktionszeit wird von Wochen auf Tage reduziert.</strong></p>
                         </div>
                         <div>
                             <h4 class="font-semibold text-gray-800">Top-Tools:</h4>
@@ -137,6 +138,12 @@
                                 <li><strong>DeepL Pro:</strong> Für hochpräzise Übersetzungen.</li>
                                 <li><strong>Knowledgeworker Create:</strong> Zur Neuerstellung strukturierter Kurse.</li>
                                 <li><strong>Coursebox AI:</strong> Zur Umwandlung von PDFs/Videos in interaktive Kurse.</li>
+                            </ul>
+                        </div>
+                         <div class="mt-4 border-t border-gray-200 pt-4">
+                            <h4 class="font-semibold text-gray-800">Beispielmaterialien:</h4>
+                            <ul class="list-disc list-inside mt-2 space-y-1">
+                                <li><a href="./Grundlagen BKM Kunde 1 - bsi 7.3 Türkisch.wav" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Audiobeispiel Türkisch (bsi 7.3) &raquo;</a></li>
                             </ul>
                         </div>
                     </div>
@@ -174,6 +181,9 @@
                             <ul class="list-disc list-inside mt-2 space-y-1">
                                 <li><a href="https://kovacc13.github.io/DermaCheck2/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">DermaCheck2 - Hautanalyse-App &raquo;</a></li>
                                 <li><a href="https://kovacc13.github.io/Derma-interaktiv-Quiz/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Derma Interaktiv-Quiz &raquo;</a></li>
+                                <li><a href="#" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Interaktives Somatologie-Quiz &raquo;</a></li>
+                                <li><a href="./Podcast - BKM - Nagelerkrankungen.wav" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Podcast: BKM - Nagelerkrankungen &raquo;</a></li>
+                                <li><a href="#" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Quiz: Anatomie und Physiologie der Haut &raquo;</a></li>
                             </ul>
                         </div>
                     </div>
@@ -196,7 +206,7 @@
                         <p><strong>Die Chance:</strong> Kosten und Zeitaufwand für Videoproduktion massiv reduzieren. Ermöglicht eine skalierbare Produktion professioneller Lehrvideos, die bei Bedarf in Minuten aktualisiert werden.</p>
                         <div class="bg-gray-100 p-4 rounded-lg">
                             <h4 class="font-semibold text-gray-800">Praxisbeispiel für BKM:</h4>
-                            <p class="mt-1">Für den "Tattoo Artist"-Kurs werden 20 Theorie-Videos benötigt. Statt einer traditionellen Produktion werden diese mit **Synthesia** oder **HeyGen** intern erstellt. Ein einheitlicher "BKM-Avatar" stärkt die Marke.</p>
+                            <p class="mt-1">Für den "Tattoo Artist"-Kurs werden 20 Theorie-Videos benötigt. Statt einer traditionellen Produktion werden diese mit <strong>Synthesia</strong> oder <strong>HeyGen</strong> intern erstellt. Ein einheitlicher "BKM-Avatar" stärkt die Marke.</p>
                         </div>
                         <div>
                             <h4 class="font-semibold text-gray-800">Top-Tools:</h4>
@@ -215,7 +225,7 @@
                 <div class="accordion-header p-6 cursor-pointer flex justify-between items-center">
                     <div class="flex items-center space-x-4">
                         <div class="bg-yellow-100 text-yellow-600 p-3 rounded-full">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin-round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                         </div>
                         <h2 class="text-xl font-semibold text-gray-900">4. Webinare: Aufzeichnung & Analyse</h2>
                     </div>
@@ -226,7 +236,7 @@
                         <p><strong>Die Chance:</strong> Einmalige Live-Webinare in dauerhafte, durchsuchbare Wissensressourcen umwandeln. KI-Tools erstellen automatisch Transkripte und prägnante Zusammenfassungen.</p>
                         <div class="bg-gray-100 p-4 rounded-lg">
                             <h4 class="font-semibold text-gray-800">Praxisbeispiel für BKM:</h4>
-                            <p class="mt-1">Ein Live-Webinar wird mit dem **Zoom AI Companion** oder **Sembly** aufgezeichnet. Direkt danach erhält der Host eine E-Mail mit Transkript, Zusammenfassung und einer Liste aller gestellten Fragen.</p>
+                            <p class="mt-1">Ein Live-Webinar wird mit dem <strong>Zoom AI Companion</strong> oder <strong>Sembly</strong> aufgezeichnet. Direkt danach erhält der Host eine E-Mail mit Transkript, Zusammenfassung und einer Liste aller gestellten Fragen.</p>
                         </div>
                         <div>
                            <h4 class="font-semibold text-gray-800">Top-Tools:</h4>
@@ -240,7 +250,7 @@
                 </div>
             </div>
 
-        </div>
+        </section>
     </main>
     
     <!-- Footer -->
@@ -249,6 +259,7 @@
     </footer>
 
     <script>
+        // This script handles the accordion functionality
         document.addEventListener('DOMContentLoaded', function () {
             const accordionHeaders = document.querySelectorAll('.accordion-header');
 
@@ -256,16 +267,16 @@
                 header.addEventListener('click', function () {
                     const accordionCard = this.parentElement;
                     const chevronIcon = this.querySelector('.chevron-icon');
-                    const isActive = accordionCard.classList.contains('active');
+                    const wasActive = accordionCard.classList.contains('active');
 
-                    // Close all other accordions
-                    document.querySelectorAll('.accordion-card.active').forEach(card => {
-                        card.classList.remove('active');
-                        card.querySelector('.chevron-icon').classList.remove('rotate-180');
+                    // Close all currently active accordions
+                    document.querySelectorAll('.accordion-card.active').forEach(activeCard => {
+                        activeCard.classList.remove('active');
+                        activeCard.querySelector('.chevron-icon').classList.remove('rotate-180');
                     });
-                    
-                    // Toggle the clicked one only if it wasn't active
-                    if(!isActive){
+
+                    // If the clicked card was not the one that was just closed, open it.
+                    if (!wasActive) {
                         accordionCard.classList.add('active');
                         chevronIcon.classList.add('rotate-180');
                     }
